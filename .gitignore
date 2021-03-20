@@ -38,3 +38,4 @@ hs_err_pid*
 /.settings/
 *.prefs
 .DS_Store
+CoolTesterSelenium/target/classes/datafile/data.properties
