@@ -1,8 +1,13 @@
 package selenium;
 
 
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +23,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
 
 import comun.LeerProperties;
 
@@ -80,22 +84,97 @@ public class SeleniumTest {
 		
 		//hacer el ejercicio con cssSelector y tagname
 		//tener un metodo donde regrese un nombre random y un numero random.
-
-	}
-	
-	/*public String randomName() {
 		
-		//Se pueda generar un nombre Random y tambien crear un metodo para que se vean numero random.
-		String[] gente=new String[] {"Sergio","Ivan","Jorge","Raul"};
-		List<String> names=Arrays.asList(gente);
+		
+		System.out.println(getRandomNumber(2));
+		System.out.println(getRandomNumber(10));
+		System.out.println(getRandomNumber(20));
+		System.out.println(getRandomNumber(30));
+		System.out.println(getRandomNumber(50));
+		System.out.println(getRandomNumber(100));
+		
+
+	}//fin main
+	
+	public static String randomName() {
+		String[] people = new String[] { "Sergio", "Ivan", "John", "Marcus", "Henry", "Ismael", "Nishant", "Rakesh",
+				"Carlos", "Felix", "Miriam", "Diana", "Adriana", "Alejandro", "Gaby", "Caro", "Melisa", "Aimee",
+				"Nataly", "Fernando", "Thomas", "Fidel", "Javier", "Ricardo", "Monica", "Nidia", "Eddy", "Evert", "Ben",
+				"Anu", "Shan", "Prathap","Rosa","Azucena" };
+		
+		List<String> names = Arrays.asList(people);
 		
 		Collections.shuffle(names);
 		
-		int index =new Random().nextInt(names.size());
+		int index = new Random().nextInt(names.size());
+		String randomName = names.get(index);
 		
-		return "";
-	}*/
+		return randomName;
+	}//TEst
 	
+	public static String randomName2() {
+		Date date = new Date();
+		List<String> names = new ArrayList<>();
+		names.add("Sergio");
+		names.add("Ivan");
+		names.add("John");
+		names.add("Marcus");
+		names.add("Henry");
+		names.add("Ismael");
+		names.add("Nishant");
+		names.add("Rakesh");
+		names.add("Carlos");
+		names.add("Felix");
+		names.add("Miriam");
+		names.add("Diana");
+		names.add("Adriana");
+		names.add("Alejandro");
+		names.add("Gaby");
+		names.add("Caro");
+		names.add("Melisa");
+		names.add("Aimee");
+		names.add("Nataly");
+		names.add("Fernando");
+		names.add("Thomas");
+		names.add("Fidel");
+		names.add("Javier");
+		names.add("Ricardo");
+		names.add("Monica");
+		names.add("Nidia");
+		names.add("Eddy");
+		names.add("Evert");
+		names.add("Ben");
+		names.add("Anu");
+		names.add("Shan");
+		names.add("Prathap");
+		names.add("Rosa");
+		names.add("Azucena");
+		Collections.shuffle(names);
+		
+		int index = new Random().nextInt(names.size());
+		DateFormat formatt = new SimpleDateFormat("HHmmssddMMyyyy");
+		
+		String randomName = names.get(index);
+
+		return randomName+formatt.format(date)+"@gmail.com";
+	}
+	
+	
+	public static String getRandomNumber(int length) {
+		StringBuilder str = new StringBuilder();
+		Random random = new Random();
+
+		for (int i = 0; i < length; i++) {
+			str.append(random.nextInt(10));
+		}
+		return str.toString();
+
+	}
+	
+
+
+	
+
 	
 	public static WebDriver startDriver(String url)
 	{
