@@ -23,6 +23,7 @@
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>4.0.0-alpha-5</version>
+			<!--Cambiar la version de selenium para evitar una excepcion que en ocasiones se mostraba 3.141.59 -->
 		</dependency>
 
 		<!-- Libreria TestNG -->
@@ -49,6 +50,18 @@
 			<version>2.6</version>
 		</dependency>
 
+<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.1.2</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.1.2</version>
+		</dependency>
 
 		<!-- Libreria para archivos de XML -->
 		<dependency>
@@ -71,5 +84,8 @@
 			<version>1.2.17</version>
 		</dependency>
 
+
+
+		
 	</dependencies>
 </project>
